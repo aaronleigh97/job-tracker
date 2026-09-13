@@ -1,0 +1,40 @@
+import type { Job } from '../types/job'
+
+export const sampleJobs: Job[] = [
+  {
+    id: 'job-1',
+    title: 'Junior React Developer',
+    company: 'Northern Digital',
+    location: 'Manchester',
+    salaryMin: 28000,
+    salaryMax: 35000,
+    technologies: ['TypeScript', 'React', 'CSS'],
+    workingArrangement: 'hybrid',
+    sourceUrl: 'https://example.com/jobs/1',
+    dateFound: '2026-09-10',
+  },
+  {
+    id: 'job-2',
+    title: 'Frontend Developer',
+    company: 'Mersey Software',
+    location: 'Liverpool',
+    salaryMin: 35000,
+    salaryMax: 45000,
+    technologies: ['JavaScript', 'React', 'Node.js'],
+    workingArrangement: 'remote',
+    sourceUrl: 'https://example.com/jobs/2',
+    dateFound: '2026-09-09',
+  },
+  {
+    id: 'job-3',
+    title: 'TypeScript Developer',
+    company: 'Yorkshire Systems',
+    location: 'Leeds',
+    salaryMin: 40000,
+    salaryMax: 52000,
+    technologies: ['TypeScript', 'React', 'PostgreSQL'],
+    workingArrangement: 'onsite',
+    sourceUrl: 'https://example.com/jobs/3',
+    dateFound: '2026-09-08',
+  },
+]
