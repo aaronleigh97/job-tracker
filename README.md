@@ -15,7 +15,7 @@ The project is currently a frontend MVP. It uses typed sample vacancies so the s
 - Open the original vacancy in a new tab
 - Use the interface across desktop and mobile screen sizes
 
-Application statuses currently last for the active browser session. Persisting them is part of the remaining MVP work.
+Saved jobs and application statuses are persisted in browser `localStorage`.
 
 ## Project goals
 
@@ -31,12 +31,15 @@ See [PROJECT_SCOPE.md](./PROJECT_SCOPE.md) for the full scope, acceptance criter
 - CSS responsive layouts
 - ESLint
 - Browser `localStorage`
+- Vitest
+- React Testing Library
+- jsdom
 
 ## Getting started
 
 ### Requirements
 
-- Node.js 20 or later
+- Node.js 22.12 or later
 - npm
 
 ### Installation
@@ -53,21 +56,23 @@ Vite will print the local development URL in the terminal, normally `http://loca
 ## Available commands
 
 ```bash
-npm run dev      # Start the development server
-npm run build    # Type-check and create a production build
-npm run lint     # Run ESLint
-npm run preview  # Preview the production build locally
+npm run dev       # Start the development server
+npm run build     # Type-check and create a production build
+npm run lint      # Run ESLint
+npm test          # Run tests in watch mode
+npm run test:run  # Run all tests once
+npm run preview   # Preview the production build locally
 ```
 
 ## Data and persistence
 
 Vacancy records are currently defined in `src/data/sampleJobs.ts`. Each record includes a title, company, location, optional salary range, technologies, working arrangement, source URL, and date found.
 
-Saved job IDs are stored locally in the user's browser. There is currently no account system, backend, or cross-device synchronisation.
+Saved job IDs and application statuses are stored locally in the user's browser.
 
 ## Roadmap
 
-1. Finish the frontend MVP, including persisted application statuses and automated tests.
+1. Expand automated coverage and complete final frontend accessibility and responsive-layout checks.
 2. Add a backend or serverless layer for permitted live vacancy data, normalisation, pagination, and duplicate detection.
 3. Consider accounts, cloud synchronisation, notes, reminders, and analytics after validating the core workflow.
 

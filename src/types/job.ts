@@ -1,4 +1,8 @@
-export type WorkingArrangement = "onsite" | "hybrid" | "remote";
+export type WorkingArrangement =
+  | 'onsite'
+  | 'hybrid'
+  | 'remote'
+  | 'unknown'
 
 export interface Job {
     id: string;
@@ -19,3 +23,25 @@ export type ApplicationStatus =
   | 'interviewing'
   | 'offer'
   | 'rejected'
+
+export interface AdzunaJob {
+  id: string
+  title: string
+  description?: string
+  created: string
+  redirect_url: string
+  salary_min?: number
+  salary_max?: number
+  company?: {
+    display_name?: string
+  }
+  location?: {
+    display_name?: string
+    area?: string[]
+  }
+}
+
+export interface AdzunaSearchResponse {
+  count: number
+  results: AdzunaJob[]
+}
